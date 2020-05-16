@@ -1,1 +1,77 @@
 Cisco Nexus interview questions:
+
+Cisco Nexus 7K
+Nexus 7000
+
+Q. Is the FAB1 module supported with SUP2 or SUP2E?
+
+A. Yes, supported with both supervisors.
+
+Q. What minimum software release do I need to support SUP2 or SUP2E?
+
+A. NX-OS 6.1
+
+Q. Can I still run NX-OS version 6.0 on SUP1?
+
+A. Yes.
+
+Q. Can I upgrade SUP2 to SUP2E?
+
+A. Yes. You would need to upgrade both the CPU and memory on board.
+
+[8/14/2014] update: after further investigation I found that the answer is no (upgrade is not possible). 
+
+Q. I need to enable high-availability (HA), can use one SUP1 with one SUP2 in the same chassis?
+
+A. No, for high-availability the two supervisors must be of the same type so you would need to use either SUP1/SUP1 or SUP2/SUP2.
+
+Q. How many I/O modules can I have in a 7004?
+
+A. Maximum of 2. The other 2 slots are reserved for the supervisors and you cannot use them for I/O modules.
+
+Q. FAB1 or FAB2 on 7004?
+
+A. The Nexus 7004 chassis does not actually use any FAB’s. The I/O modules are connected back to back.
+
+Q. How many FEX’s can the Nexus 7000 support?
+
+A. 32 FEX’s with SUP1 or SUP2; and 48 FEX’s with SUP2E.
+[8/14/2014] update: 64 FEXs with SUP2E or SUP2 
+
+Q. How many VDC’s can the Nexus 7000 support?
+
+A. 4 VDC’s (including 1 VDC for management) with SUP1 or SUP2; and 8 + 1 (management) VDC’s with SUP2E.
+
+Q. Which modules support FabricPath, FCoE, and FEX connectivity?
+
+A. FabricPath is supported on all F1 and F2 modules. FCoE is supported on all F1 modules and F2 modules except on the 48 x 10GE F2 (Copper) module. FEX is supported on all F2 modules. Use this link from Cisco as a reference.
+
+[8/14/2014] update: The F2e module supports FCoE, FEX, and FabricPath. The F3 module (12 port 40GE) supports FEX, FabricPath, FCoE, OTV, MPLS and LISP. 
+
+Q. Which modules support LISP, MPLS, and OTV?
+
+A. All M1 and M2 modules support MPLS and OTV. LISP is supported only on the 32 x 10GE M1 module.
+
+Q. Does the Nexus 7004 support SUP1?
+
+A. No, the Nexus 7004 supports only SUP2 and SUP2E.
+
+Q. Can I place an F2 module in the same VDC with F1 or M module?
+
+A. No, the F2 module must be placed in a separate VDC so if you plan to mix F2 with F1, and M modules in the same chassis you would need a VDC license.
+
+[8/14/2014] update: The F2e and F3 (12 port 40GE) modules can interoperate with the M-series in the same VDC.  
+
+Q. How can I upgrade from FAB1 to FAB2 modules during operation without any service disruption?
+
+A. Yes, if you replace each module within a couple of minutes. Just make sure to replace all FAB1 with FAB2 modules within few hours. If you mix FAB1 with FAB2 modules in the same chassis for a long time, the FAB2 modules will operate in backward compatible mode and downgrade their speed to match the FAB1 modules peed. You can follow this link for step-by-step procedure for upgrading the FAB modules on the Nexus 7000.
+
+Q. Can I use FAB1 modules in a 7009 chassis?
+
+A. No, the Nexus 7009 uses only FAB2 modules.
+
+Q. Does the Nexus 7000 support native Fibre Channel (FC) ports?
+
+A. No, FC ports are not supported on the Nexus 7000. You would need either the Nexus 5500 or the MDS 9000 to get FC support.
+
+
