@@ -1,0 +1,65 @@
+1. what kind of setup you have done in your environment in ACI i.e. single POD, stretheched POD or multipod?
+
+2.How do we configure MPOD in two sites?
+ what are the basi requiremet?
+
+3. Assume, you are configuring cisoc ACI, if 2 APIC's already configured and you asked to add 3rd APIC in fabric and how you get information from controller? what all things we need from where we extract the information?
+what details we get from CIMC/KVM, TEPS or multicast?
+
+4. Pervasive gateway - what is? If you are migrating DC from existing legacy to cisco ACI, Existing in US and new ACI based in Pune, and there is one admin VLAN1 which cant change? then how you can slowly move the existing setup to new ACI...?
+
+5. In cisco ACI, you need to install pair of switches as additional requirement, you add that switch..there would be fabric ACI...what all things you need to configure and what things happen in background to discover this?
+
+6. what are the rules/steps to identify the fabric discovery to install new switches?
+
+7.In N5K switches, you have three types of info, MAC/RIB/ARP (IP+MAC) --- in cisco ACI there is flood migration what is that technology?
+
+8. can you build the cisco ACI with N7K? what are the basic requirement to build the new ACI?
+
+9. why N9K require to run the cisoc ACI setup? why not others like N7K in cisco ACI Fabric?
+
+10. Do you know how MPOD connection in between DC to another DC?
+
+11. AAEP means what? what is AAEP in cisco ACI?
+
+12. What are the domains like L2 domain, L3 domain, Physical domain and VMM domain? What is the use of that? what is use of physical domain?
+
+13. By defaults how many Tenants are configured in Cisco ACI setup?
+
+14. If you are going to configure any new tenant, that tenant will be part of what or any of above?Its in different way what is that?
+
+15. What is VPC+?
+VPC+ are iin fabric path -----same like VPC?
+
+16. What happen if keepalive link and peer-link both goes down? what will happen?
+
+17. Have configured OTV? what is specialities of OTV over other technologies such as EVPN?
+
+19. OTV is proprietery of Cisco, correct?
+
+20. Which version used in APIC? ----3.2(3s)
+
+21. Packet flow in ACI?
+
+22. What is the EPG and how to create it?
+
+23. What is the tenant and how to create it.
+
+24. How to convert NX-OS switches in ACI mode?
+
+25. What is fabric path? How it works?
+
+26. What is diff. between MPOD and multisite?
+
+27. What is VPC and VPC+ in nexus?
+
+28. What is VDC in nexus?
+
+29. Suppose, Two DC, How to connect them through in ACI environment.
+
+30. What is new version going in ACI? --- 13.2.3(s)
+
+31. How to upgrade the OS of switches ACI through APIC?
+
+32. How to take config backup snapshot in ACI fabric?
+
